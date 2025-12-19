@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sanika Dale | Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#6366f1;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:1rem 3rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,23,42,0.8);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav h2{
+  color:var(--accent);
+  font-weight:700;
+}
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:2rem;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 10%;
+  background:
+    radial-gradient(circle at top left, rgba(99,102,241,0.15), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(139,92,246,0.15), transparent 40%),
+    linear-gradient(135deg, #0f172a, #020617);
+}
+.hero-content{
+  max-width:700px;
+}
+.hero h1{
+  font-size:3.5rem;
+  font-weight:700;
+  line-height:1.2;
+}
+.hero h1 span{
+  color:#6366f1;
+}
+.hero h3{
+  font-size:1.2rem;
+  color:#a5b4fc;
+  margin:1rem 0;
+  font-weight:500;
+}
+.hero p{
+  color:#94a3b8;
+  font-size:1.1rem;
+  margin-bottom:2.5rem;
+}
+.hero-buttons{
+  display:flex;
+  gap:1rem;
+}
+.primary-btn{
+  padding:0.9rem 2.2rem;
+  background:#6366f1;
+  border:none;
+  border-radius:999px;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+.primary-btn:hover{
+  box-shadow:0 0 25px rgba(99,102,241,0.6);
+  transform:translateY(-2px);
+}
+.secondary-btn{
+  padding:0.9rem 2.2rem;
+  background:transparent;
+  border:1px solid #6366f1;
+  border-radius:999px;
+  color:#c7d2fe;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+.secondary-btn:hover{
+  background:#6366f1;
+  color:white;
+}
+
+
+/* SECTIONS */
+section{
+  padding:6rem 10%;
+}
+
+section h2{
+  font-size:2.2rem;
+  margin-bottom:1rem;
+}
+
+section p{
+  color:var(--muted);
+}
+
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  border-radius:20px;
+}
+
+.skills{
+  margin-top:1.5rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.7rem;
+}
+
+.skills span{
+  background:#1f2933;
+  padding:0.5rem 1rem;
+  border-radius:20px;
+  font-size:0.85rem;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+  margin-top:3rem;
+}
+
+.card{
+  background:var(--card);
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card div{
+  padding:1.5rem;
+}
+
+.card h3{
+  margin-bottom:0.5rem;
+}
+
+.card p{
+  font-size:0.9rem;
+  margin-bottom:1rem;
+}
+
+.card a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact p{
+  margin-bottom:2rem;
+}
+
+.contact a{
+  display:inline-block;
+  padding:0.8rem 2rem;
+  border:2px solid var(--accent);
+  border-radius:30px;
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.contact a:hover{
+  background:var(--accent);
+  color:white;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:2rem;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about{
+    grid-template-columns:1fr;
+  }
+  .hero h1{
+    font-size:2.5rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Sanika</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Sanika Dale</h1>
+    <h3>Frontend Developer</h3>
+    <p>Building clean, modern, and reliable web interfaces.</p>
+
+    <button class="primary-btn"
+      onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+      View Work
+    </button>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <div>
+      <p>
+        I am a passionate web developer focused on creating professional,
+        user-friendly websites with clean design and modern technologies.
+        I enjoy building interfaces that look good and work flawlessly.
+      </p>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>UI/UX</span>
+        <span>Responsive Design</span>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" />
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p>Some of my recent work</p>
+
+  <div class="projects">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" />
+      <div>
+        <h3>Portfolio Website</h3>
+        <p>Modern responsive portfolio with clean UI and animations.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" />
+      <div>
+        <h3>Dashboard UI</h3>
+        <p>Professional dashboard interface focused on usability.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="D:\Portfolio\image.jpg" />
+      <div>
+        <h3>Web Application</h3>
+        <p>Interactive web app built with modern frontend tools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Interested in working together? Let’s talk.</p>
+  <a href="mailto:yourmail@example.com">Get in Touch</a>
+</section>
+
+<footer>
+  © 2025 Sanika Dale. All rights reserved.
+</footer>
+
+</body>
+</html>
